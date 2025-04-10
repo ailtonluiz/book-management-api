@@ -1,4 +1,4 @@
-package com.ailtonluiz.bookmanager.model.domain;
+package com.ailtonluiz.bookmanager.domain.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -12,7 +12,7 @@ import java.time.OffsetDateTime;
 @Entity
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Data
-public class Nationality {
+public class Genre {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,20 +40,19 @@ public class Nationality {
     }
 
     /**
-     * Activa la nacionalidad, estableciendo el campo 'enabled' como verdadero.
-     * Este método puede ser llamado para activar el nacionalidad a través de la API.
+     * Activa el genero, estableciendo el campo 'enabled' como verdadero.
+     * Este método puede ser llamado para activar el genero a través de la API.
      */
-    public void enabledNationality() {
+    public void enabledGenre() {
         this.enabled = Boolean.TRUE;
     }
 
     /**
-     * Desactiva la nacionalidad, estableciendo el campo 'enabled' como falso.
-     * Este método puede ser llamado para desactivar la nacionalidad a través de la API.
+     * Desactiva el genero, estableciendo el campo 'enabled' como falso.
+     * Este método puede ser llamado para desactivar el genero a través de la API.
      */
-    public void disabledNationality() {
+    public void disabledGenre() {
         this.enabled = Boolean.FALSE;
     }
-
 
 }

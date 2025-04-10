@@ -1,7 +1,7 @@
 package com.ailtonluiz.bookmanager.api.assembler;
 
 import com.ailtonluiz.bookmanager.api.model.NationalityModel;
-import com.ailtonluiz.bookmanager.model.domain.Nationality;
+import com.ailtonluiz.bookmanager.domain.model.Nationality;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

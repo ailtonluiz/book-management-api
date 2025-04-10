@@ -1,4 +1,4 @@
-package com.ailtonluiz.bookmanager.model.domain;
+package com.ailtonluiz.bookmanager.domain.model;
 
 import com.ailtonluiz.bookmanager.config.validation.ValidBookYear;
 import jakarta.persistence.*;

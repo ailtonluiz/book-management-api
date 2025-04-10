@@ -1,4 +1,4 @@
-package com.ailtonluiz.bookmanager.model.domain;
+package com.ailtonluiz.bookmanager.domain.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -10,19 +10,24 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.time.OffsetDateTime;
 
 @Entity
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Data
-public class Genre {
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+public class Author {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Long id;
 
-    @NotBlank(message = "No puede ser nulo o vazio")
+    @NotBlank(message = "El nombre del autor no puede ser nulo o vazio")
     private String name;
 
     private Boolean enabled = Boolean.TRUE;
+
+    @ManyToOne
+    @JoinColumn(name = "nationality_id")
+    private Nationality nationality;
+
 
     @CreationTimestamp
     @Column(nullable = false, columnDefinition = "datetime")
@@ -38,21 +43,19 @@ public class Genre {
 
         name = name.toUpperCase();
     }
-
     /**
-     * Activa el genero, estableciendo el campo 'enabled' como verdadero.
-     * Este método puede ser llamado para activar el genero a través de la API.
+     * Activa el Autor, estableciendo el campo 'enabled' como verdadero.
+     * Este método puede ser llamado para activar el autor a través de la API.
      */
-    public void enabledGenre() {
+    public void enabledAuthor() {
         this.enabled = Boolean.TRUE;
     }
 
     /**
-     * Desactiva el genero, estableciendo el campo 'enabled' como falso.
-     * Este método puede ser llamado para desactivar el genero a través de la API.
+     * Desactiva el Autor, estableciendo el campo 'enabled' como falso.
+     * Este método puede ser llamado para desactivar el autor a través de la API.
      */
-    public void disabledGenre() {
+    public void disabledAuthor() {
         this.enabled = Boolean.FALSE;
     }
-
 }

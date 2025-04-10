@@ -1,4 +1,4 @@
-package com.ailtonluiz.bookmanager.model.exception;
+package com.ailtonluiz.bookmanager.domain.exception;
 
 import java.io.Serial;
 

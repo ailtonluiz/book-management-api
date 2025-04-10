@@ -25,7 +25,7 @@
 		</developer>
 	</developers>
 	<scm>
-		<connection>scm:git:git://github.com/ailtonluiz/book-management-api.git</connection>
+		<connection>scm:git:git://github.com/ailtonluiz/git .git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/ailtonluiz/book-management-api.git</developerConnection>
 		<tag>HEAD</tag>
 		<url>https://github.com/ailtonluiz/book-management-api</url>
