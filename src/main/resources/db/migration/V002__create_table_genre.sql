@@ -1,4 +1,4 @@
-CREATE TABLE nationality (
+CREATE TABLE genre (
     id BIGINT NOT NULL AUTO_INCREMENT,
     name VARCHAR(60) NOT NULL,
     enabled BOOLEAN DEFAULT TRUE,
