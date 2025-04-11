@@ -25,6 +25,18 @@ public class RegisterNationalityService {
     }
 
     @Transactional
+    public void enabledNationality(Long nationalityId) {
+        Nationality currentNationality = findOrFail(nationalityId);
+        currentNationality.enabledNationality();
+    }
+
+    @Transactional
+    public void disabledNationality(Long nationalityId) {
+        Nationality currentNationality = findOrFail(nationalityId);
+        currentNationality.disabledNationality();
+    }
+
+    @Transactional
     public void delete(Long nationalityId) {
         try {
             nationalityRepository.deleteById(nationalityId);

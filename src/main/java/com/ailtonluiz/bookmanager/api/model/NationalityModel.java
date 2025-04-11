@@ -13,6 +13,8 @@ public class NationalityModel {
 
     private String name;
 
+    private Boolean enabled;
+
     private OffsetDateTime createdAt;
 
     private OffsetDateTime updatedAt;
