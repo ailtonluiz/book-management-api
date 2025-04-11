@@ -46,6 +46,19 @@ public class RegisterBookService {
     }
 
     @Transactional
+    public void enabled(Long bookId) {
+        Book currentBook = findOrFail(bookId);
+
+        currentBook.enabledBook();
+    }
+
+    @Transactional
+    public void disabled(Long bookId) {
+        Book currentBook = findOrFail(bookId);
+        currentBook.disabledBook();
+    }
+
+    @Transactional
     public void delete(Long bookId) {
 
         try {

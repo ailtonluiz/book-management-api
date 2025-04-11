@@ -25,6 +25,19 @@ public class RegisterGenreService {
     }
 
     @Transactional
+    public void enabled(Long genreId) {
+        Genre currenteGenre = findOrFail(genreId);
+        currenteGenre.enabledGenre();
+
+    }
+
+    @Transactional
+    public void disabled(Long genreId) {
+        Genre currentGenre = findOrFail(genreId);
+        currentGenre.disabledGenre();
+    }
+
+    @Transactional
     public void delete(Long genreId) {
         try {
             genreRepository.deleteById(genreId);

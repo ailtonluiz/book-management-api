@@ -15,6 +15,8 @@ public class BookModel {
 
     private String description;
 
+    private String isbn;
+
     private Integer year;
 
     private GenreSummaryModel genre;
@@ -22,6 +24,8 @@ public class BookModel {
     private String photoUrl;
 
     private AuthorSummaryModel author;
+
+    private Boolean enabled;
 
     private OffsetDateTime createdAt;
 

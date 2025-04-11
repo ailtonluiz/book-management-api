@@ -27,6 +27,9 @@ public class Book {
     @NotBlank(message = "Por favor, ingrese la descripción. Este campo es obligatorio.")
     private String description;
 
+    @Column(length = 13)
+    private String isbn;
+
     @NotNull
     @ValidBookYear
     private Integer year;

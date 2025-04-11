@@ -1,0 +1,1 @@
+ALTER TABLE book ADD COLUMN isbn VARCHAR(13) AFTER description;

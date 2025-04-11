@@ -13,6 +13,8 @@ public class AuthorModel {
 
     private String name;
 
+    private Boolean enabled;
+
     private NationalitySummaryModel nationality;
 
     private OffsetDateTime createdAt;

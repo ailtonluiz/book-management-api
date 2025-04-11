@@ -1,4 +1,4 @@
-package com.ailtonluiz.bookmanager.api;
+package com.ailtonluiz.bookmanager.api.controller;
 
 import com.ailtonluiz.bookmanager.api.assembler.NationalityInputDisassembler;
 import com.ailtonluiz.bookmanager.api.assembler.NationalityModelAssembler;

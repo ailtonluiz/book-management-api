@@ -3,6 +3,7 @@ package com.ailtonluiz.bookmanager.domain.service;
 import com.ailtonluiz.bookmanager.domain.exception.AuthorNotFoundException;
 import com.ailtonluiz.bookmanager.domain.exception.EntityInUseException;
 import com.ailtonluiz.bookmanager.domain.model.Author;
+import com.ailtonluiz.bookmanager.domain.model.Book;
 import com.ailtonluiz.bookmanager.domain.model.Nationality;
 import com.ailtonluiz.bookmanager.domain.repository.AuthorRepository;
 import jakarta.transaction.Transactional;
@@ -33,6 +34,18 @@ public class RegisterAuthorService {
         author.setNationality(nationality);
         return authorRepository.save(author);
 
+    }
+
+    @Transactional
+    public void enabled(Long authorId) {
+        Author currentAuthor = findOrFail(authorId);
+        currentAuthor.enabledAuthor();
+    }
+
+    @Transactional
+    public void disabled(Long authorId) {
+        Author currentAuthor = findOrFail(authorId);
+        currentAuthor.disabledAuthor();
     }
 
     @Transactional
