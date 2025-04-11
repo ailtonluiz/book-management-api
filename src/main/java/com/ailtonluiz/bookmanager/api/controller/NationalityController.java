@@ -7,6 +7,10 @@ import com.ailtonluiz.bookmanager.api.model.input.NationalityInput;
 import com.ailtonluiz.bookmanager.domain.model.Nationality;
 import com.ailtonluiz.bookmanager.domain.repository.NationalityRepository;
 import com.ailtonluiz.bookmanager.domain.service.RegisterNationalityService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.ExampleObject;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,6 +33,26 @@ public class NationalityController {
 
     @Autowired
     private NationalityInputDisassembler nationalityInputDisassembler;
+
+    //@Operation(summary = "Listar todas las nacionalidades.", description = "Este endpoint retorna todas las nacionalidades actualmente registradas en la base de datos")
+    @Operation(
+            summary = "Listar todas las nacionalidades",
+            description = "Este endpoint retorna todas las nacionalidades actualmente registradas en la base de datos",
+            responses = {
+                    @ApiResponse(
+                            responseCode = "200",
+                            description = "La lista de nacionalidades se ha recuperado correctamente",
+                            content = @Content(
+                                    mediaType = "application/json",
+                                    examples = @ExampleObject(
+                                            name = "Ejemplo de respuesta",
+                                            value = "[{\"id\":1, \"name\":\"Brasil\", \"enabled\":\"true\", \"createdAt\":\"2024-01-01T12:00:00Z\", \"updatedAt\":\"2024-01-10T15:30:00Z\"}, {\"id\":2, \"name\":\"España\", \"enabled\":\"false\", \"createdAt\":\"2024-02-01T09:15:00Z\", \"updatedAt\":\"2024-02-05T11:45:00Z\"}]"
+
+                                    )
+                            )
+                    )
+            }
+    )
 
     @GetMapping
     public List<NationalityModel> list() {
