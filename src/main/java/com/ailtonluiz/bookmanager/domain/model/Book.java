@@ -1,6 +1,6 @@
 package com.ailtonluiz.bookmanager.domain.model;
 
-import com.ailtonluiz.bookmanager.config.validation.ValidBookYear;
+import com.ailtonluiz.bookmanager.core.config.validation.ValidBookYear;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

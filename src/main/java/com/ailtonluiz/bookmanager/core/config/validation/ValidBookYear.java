@@ -1,4 +1,4 @@
-package com.ailtonluiz.bookmanager.config.validation;
+package com.ailtonluiz.bookmanager.core.config.validation;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

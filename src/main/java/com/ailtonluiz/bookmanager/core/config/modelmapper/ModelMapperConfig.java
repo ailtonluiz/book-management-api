@@ -1,4 +1,4 @@
-package com.ailtonluiz.bookmanager.config.modelmapper;
+package com.ailtonluiz.bookmanager.core.config.modelmapper;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

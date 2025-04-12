@@ -1,4 +1,4 @@
-package com.ailtonluiz.bookmanager.config.mail;
+package com.ailtonluiz.bookmanager.core.config.mail;
 
 import org.springframework.context.annotation.Configuration;
 
