@@ -93,7 +93,7 @@ public class NationalityController {
         registerNationalityService.enabledNationality(nationalityId);
     }
 
-    @DeleteMapping("/{nationalityId}/enable")
+    @PutMapping("/{nationalityId}/disabled")
     public void disabled(@PathVariable Long nationalityId) {
         registerNationalityService.disabledNationality(nationalityId);
     }
