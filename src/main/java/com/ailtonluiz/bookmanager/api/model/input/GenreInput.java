@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 public class GenreInput {
 
-    @NotBlank
+    @NotBlank(message = "El nombre del género no puede estar vacío")
     private String name;
 
 }

@@ -10,11 +10,11 @@ import lombok.Setter;
 @Setter
 public class AuthorInput {
 
-    @NotBlank
+    @NotBlank(message = "El nombre del autor no puede estar vacío")
     private String name;
 
     @Valid
-    @NotNull
+    @NotNull(message = "La nacionalidad no puede ser nula")
     private NationalityIdInput nationality;
 
 }

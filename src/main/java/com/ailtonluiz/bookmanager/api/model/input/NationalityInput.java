@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 public class NationalityInput {
 
-    @NotBlank
+    @NotBlank(message = "El nombre de la nacionalidad no puede estar vacío")
     private String name;
 
 }

@@ -2,6 +2,7 @@ package com.ailtonluiz.bookmanager.domain.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.hibernate.annotations.CreationTimestamp;
@@ -9,25 +10,40 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.OffsetDateTime;
 
+/**
+ * Entidad que representa un autor.
+ * Esta clase contiene la información básica de un autor.
+ */
 @Entity
-@Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Data
 public class Author {
 
+    /**
+     * Identificador único del autor
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Long id;
 
-    @NotBlank(message = "El nombre del autor no puede ser nulo o vazio")
+    /**
+     * Nombre del autor
+     */
+    @NotBlank(message = "No puede ser nulo o vazio")
     private String name;
 
-    private Boolean enabled = Boolean.TRUE;
-
+    /**
+     * Nacionalidad del autor
+     */
     @ManyToOne
-    @JoinColumn(name = "nationality_id")
+    @JoinColumn(name = "nationality_id", nullable = false)
     private Nationality nationality;
 
+    /**
+     * Estado de habilitación del autor
+     */
+    private Boolean enabled = Boolean.TRUE;
 
     @CreationTimestamp
     @Column(nullable = false, columnDefinition = "datetime")
@@ -43,8 +59,9 @@ public class Author {
 
         name = name.toUpperCase();
     }
+
     /**
-     * Activa el Autor, estableciendo el campo 'enabled' como verdadero.
+     * Activa el autor, estableciendo el campo 'enabled' como verdadero.
      * Este método puede ser llamado para activar el autor a través de la API.
      */
     public void enabledAuthor() {
@@ -52,10 +69,11 @@ public class Author {
     }
 
     /**
-     * Desactiva el Autor, estableciendo el campo 'enabled' como falso.
+     * Desactiva el autor, estableciendo el campo 'enabled' como falso.
      * Este método puede ser llamado para desactivar el autor a través de la API.
      */
     public void disabledAuthor() {
         this.enabled = Boolean.FALSE;
     }
+
 }

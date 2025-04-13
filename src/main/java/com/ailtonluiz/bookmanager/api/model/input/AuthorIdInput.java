@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 public class AuthorIdInput {
 
-    @NotNull
+    @NotNull(message = "El ID del autor no puede ser nulo")
     private Long id;
 
 }

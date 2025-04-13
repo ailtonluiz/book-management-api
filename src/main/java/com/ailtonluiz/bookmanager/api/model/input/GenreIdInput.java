@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 public class GenreIdInput {
 
-    @NotNull
+    @NotNull(message = "El ID del género no puede ser nulo")
     private Long id;
 
 }

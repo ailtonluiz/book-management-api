@@ -9,19 +9,32 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.OffsetDateTime;
 
+/**
+ * Entidad que representa una nacionalidad.
+ * Esta clase contiene la información básica de una nacionalidad.
+ */
 @Entity
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Data
 public class Nationality {
 
+    /**
+     * Identificador único de la nacionalidad
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Long id;
 
+    /**
+     * Nombre de la nacionalidad
+     */
     @NotBlank(message = "No puede ser nulo o vazio")
     private String name;
 
+    /**
+     * Estado de habilitación de la nacionalidad
+     */
     private Boolean enabled = Boolean.TRUE;
 
     @CreationTimestamp
@@ -35,13 +48,12 @@ public class Nationality {
     @PrePersist
     @PreUpdate
     private void prePersistUpdate() {
-
         name = name.toUpperCase();
     }
 
     /**
      * Activa la nacionalidad, estableciendo el campo 'enabled' como verdadero.
-     * Este método puede ser llamado para activar el nacionalidad a través de la API.
+     * Este método puede ser llamado para activar la nacionalidad a través de la API.
      */
     public void enabledNationality() {
         this.enabled = Boolean.TRUE;
@@ -54,6 +66,4 @@ public class Nationality {
     public void disabledNationality() {
         this.enabled = Boolean.FALSE;
     }
-
-
 }

@@ -9,19 +9,32 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.OffsetDateTime;
 
+/**
+ * Entidad que representa un género literario.
+ * Esta clase contiene la información básica de un género.
+ */
 @Entity
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Data
 public class Genre {
 
+    /**
+     * Identificador único del género
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Long id;
 
+    /**
+     * Nombre del género
+     */
     @NotBlank(message = "No puede ser nulo o vazio")
     private String name;
 
+    /**
+     * Estado de habilitación del género
+     */
     private Boolean enabled = Boolean.TRUE;
 
     @CreationTimestamp

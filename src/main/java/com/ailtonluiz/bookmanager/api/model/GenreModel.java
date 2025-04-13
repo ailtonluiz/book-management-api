@@ -3,20 +3,36 @@ package com.ailtonluiz.bookmanager.api.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.OffsetDateTime;
-
+/**
+ * Modelo de género para la API.
+ * Este modelo representa un género literario en el sistema.
+ */
 @Getter
 @Setter
 public class GenreModel {
 
+    /**
+     * Identificador único del género
+     */
     private Long id;
 
+    /**
+     * Nombre del género
+     */
     private String name;
 
+    /**
+     * Estado indicando si el género está activo
+     */
     private Boolean enabled;
 
-    private OffsetDateTime createdAt;
+    /**
+     * Fecha y hora de creación del género
+     */
+    private String createdAt;
 
-    private OffsetDateTime updatedAt;
-
+    /**
+     * Fecha y hora de última actualización del género
+     */
+    private String updatedAt;
 }

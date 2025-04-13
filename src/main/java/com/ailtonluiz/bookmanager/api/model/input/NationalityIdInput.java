@@ -1,6 +1,5 @@
 package com.ailtonluiz.bookmanager.api.model.input;
 
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,7 +8,7 @@ import lombok.Setter;
 @Setter
 public class NationalityIdInput {
 
-    @NotNull
+    @NotNull(message = "El ID de la nacionalidad no puede ser nulo")
     private Long id;
 
 }
