@@ -8,8 +8,7 @@
 
 ## 🌟 Descripción
 
-BookManager es un sistema robusto y escalable para la gestión integral de bibliotecas, desarrollado con las últimas tecnologías del ecosistema Java. Este proyecto demuestra las mejores prácticas de desarrollo de software, arquitectura limpia y patrones de diseño modernos.
-
+BookManager es un sistema robusto y escalable para la gestión integral de bibliotecas, desarrollado con las últimas tecnologías del ecosistema Java. Este proyecto fue creado con el objetivo de demostrar mis conocimientos en desarrollo de software, aplicando buenas prácticas, arquitectura limpia y patrones de diseño modernos.
 ## ✨ Características Destacadas
 
 - 🏗️ **Arquitectura Limpia**: Implementación de Clean Architecture con separación clara de responsabilidades
