@@ -1,0 +1,15 @@
+
+CREATE TABLE loan (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    reader_id BIGINT NOT NULL,
+    copy_id BIGINT NOT NULL,
+    loan_date DATE NOT NULL,
+    due_date DATE NOT NULL,
+    return_date DATE,
+    status VARCHAR(20) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+    CONSTRAINT fk_loan_reader FOREIGN KEY (reader_id) REFERENCES reader(id) ON DELETE CASCADE,
+    CONSTRAINT fk_loan_copy FOREIGN KEY (copy_id) REFERENCES copy(id) ON DELETE CASCADE
+);
