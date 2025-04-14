@@ -25,7 +25,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("api/v1/nationalities")
-@Tag(name = "Nationalities", description = "API para gestión de nacionalidades")
+@Tag(name = "Nacionalidades", description = "API para gestión de nacionalidades")
 public class NationalityController {
 
     @Autowired

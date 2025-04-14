@@ -1,10 +1,11 @@
-# 📚 BookManager - Sistema de Gestión de Libros
+git # 📚 BookManager - Sistema de Gestión de Libros
 
 ![Java](https://img.shields.io/badge/Java-21-red.svg)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.4-brightgreen.svg)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-blue.svg)
 ![Postman](https://img.shields.io/badge/Postman-API-orange.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 
 ## 🌟 Descripción
 
@@ -204,7 +205,31 @@ El archivo `application.properties` incluye configuraciones para:
 </dependencies>
 ```
 
+## 🚀 Próximas Funcionalidades (v2.0.0)
 
+### 📚 Sistema de Préstamos
+- Gestión de múltiples ejemplares por libro
+- Control de disponibilidad en tiempo real
+- Sistema de reservas anticipadas
+- Historial de préstamos por lector
+
+### 👥 Gestión de Lectores
+- Registro completo de lectores
+- Historial de préstamos
+- Sistema de calificaciones
+- Preferencias de lectura
+
+### 📧 Sistema de Notificaciones
+- Notificaciones por email automáticas
+- Recordatorios de devolución
+- Alertas de disponibilidad
+- Boletines personalizados
+
+### 📊 Control y Estadísticas
+- Dashboard de préstamos
+- Reportes de popularidad
+- Análisis de tendencias
+- Métricas de uso
 
 ---
 
